@@ -1,0 +1,77 @@
+html, body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:  Georgia, 'Times New Roman', Times, serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit
+}
+
+nav header h1 {
+  font-size: 2em;
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 110em;
+  width: 95%;
+}
+
+.word:hover {
+  background-color: rgba(0, 255, 34, 0.253);
+}
+
+.ipa-wait {
+  color: #c1c67f;
+}
+
+.ipa-done {
+  color: #7fa8c6;
+}
+
+.ipa-fail {
+  color: #cd6a51;
+}
+
+.ipa-wait{
+  color: #cbcd51;
+}
+
+.audio {
+  visibility: hidden;
+}
+
+.notepad {
+  margin-top: 1em;
+  border: 1px solid #888;
+  background: #2b2b2b;
+  padding: 5px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: white;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.btn-parse {
+  margin-top: 2em;
+  padding: .5em 1em;
+  background-color: #C02942;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.btn-parse:hover {
+  background-color: rgb(226, 23, 57);
+}
+
+/*
+- green to show the translation
+- red that is not found
+- blue - it has been parsed
+*/
