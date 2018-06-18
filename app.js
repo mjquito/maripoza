@@ -5,7 +5,7 @@ const path = require('path');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const searchRouter = require('./routes/search').router;
-const debug = require('debug')('app:server');
+const debug = require('debug')('mariposa:server');
 const app = express();
 const http = require('http');
 
@@ -92,4 +92,4 @@ app.set('port', port);
 let server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
-server.on('listening', onListening);
+server.on('listening', (onListening));
