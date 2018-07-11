@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node app",
-    "debug": "DEBUG=mariposa:server node app"
+    "debug": "DEBUG=mariposa:server node app",
+    "inspect": "node --inspect-brk ./CMU_Dictionary/LoadDictionary.js "
   },
   "dependencies": {
     "debug": "~2.6.9",

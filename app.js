@@ -85,7 +85,7 @@ function onListening() {
 }
 
 // =============================
-// sart
+// start
 // =============================
 let port = normalizePort(process.env.PORT);
 app.set('port', port);
