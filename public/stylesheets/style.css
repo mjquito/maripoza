@@ -1,59 +1,72 @@
+/* ========== */
+
+/* ========== */
+*, *:before, *:after {
+  box-sizing: inherit
+}
+
 html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family:  Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
 }
-
-*, *:before, *:after {
-  box-sizing: inherit
-}
-
-nav header h1 {
-  font-size: 2em;
-}
-
-.container{
+/* ========== */
+/* layout */
+/* ========== */
+.container {
   margin-left: auto;
   margin-right: auto;
   max-width: 110em;
   width: 95%;
+  
 }
 
-.word:hover {
-  background-color: rgba(0, 255, 34, 0.253);
+/* ========== */
+/* module */
+/* ========== */
+/* loeader */
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex; 
 }
 
-.ipa-wait {
-  color: #c1c67f;
+.loader-message {
+  margin: auto;
 }
 
-.ipa-done {
-  color: #7fa8c6;
+.page {
+  opacity: 0;
+  height: 0px;
+  transition: all 1s ease-in-out;
 }
 
-.ipa-fail {
-  color: #cd6a51;
+.hide {
+  display: none;
 }
 
-.ipa-wait{
-  color: #cbcd51;
+.show {
+  height: auto;
+  opacity: 1;
 }
 
-.audio {
-  visibility: hidden;
+/* nav */
+nav header h1 {
+  font-size: 2em;
 }
 
+/* nodepad */
 .notepad {
   margin-top: 1em;
   border: 1px solid #888;
   background: #2b2b2b;
   padding: 5px;
-  font-size: 1.5em;
+  font-size: 30px;
   line-height: 1.5em;
   color: white;
   word-wrap: break-word;
-  white-space: pre-line;
 }
 
 .btn-parse {
@@ -64,14 +77,60 @@ nav header h1 {
   border: none;
   color: white;
   font-size: 1.2em;
+  transition: .3s all ease-in;
 }
 
 .btn-parse:hover {
   background-color: rgb(226, 23, 57);
 }
+.ipa {
+  margin-left: 5px;
+}
 
-/*
-- green to show the translation
-- red that is not found
-- blue - it has been parsed
-*/
+.ipa:hover {
+  outline: 1px dashed #6e6e6e;
+}
+.ipa-done {
+  color: #6bcd51;
+}
+.ipa-error {
+  color: #cd6a51;
+}
+.ipa-wait{
+  color: #cbcd51;
+}
+.ipa-nfound {
+  color: #a1a191;
+}
+.audio {
+  visibility: hidden;
+}
+
+/* iframes dictionaries */
+.dict-iframe{
+  width: 75%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: #2b2b2b;
+  display: block;
+}
+
+/* btns scroll top */
+#btnScrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #C02942;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}

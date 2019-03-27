@@ -1,10 +1,8 @@
 require('dotenv').config();
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
-const searchRouter = require('./routes/search').router;
 const debug = require('debug')('mariposa:server');
 const app = express();
 const http = require('http');
@@ -19,11 +17,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next({message: 'Not found', status: 404});
 });
 
 // error handler
@@ -93,3 +90,4 @@ let server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', (onListening));
+

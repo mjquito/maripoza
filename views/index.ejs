@@ -3,26 +3,31 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css" />
-  <script src="javascripts/axios.min.js"></script>
 </head>
 <body>
-<nav>
-  <div class='container'>
-    <header>
-      <h1>Maripoza</h1>
-    </header>
+  <div class='page'>
+    <nav>
+      <div class='container'>
+        <header>
+          <h1>Maripoza</h1>
+        </header>
+      </div>
+    </nav>
+    <main>
+      <div class='container'>
+        <div class='notepad' contenteditable="true" spellcheck="false">Type Something</div>
+        <button class='btn-parse'>Translate</button>
+
+        <div id='dictionaries-iframes'>
+        </div>
+        <button id='btnScrollTop' title='Go to top'>Top</button>
+      </div>
+    </main>
   </div>
-</nav>
-<main>
-  <div class='container'>
-    <div class='notepad' contenteditable="true">
-    </div>
-    <button class='btn-parse'>Parse</button>
-    
-  </div>
-</main>
-<footer>
-</footer>
-<script src="javascripts/maripoza.js"></script>
+  <section class='loader'>
+    <div class='loader-message'>Starting ... just give me a second</div>
+  </section>
+  <script src="javascripts/axios.min.js"></script>
+  <script src="javascripts/maripoza.js"></script>
 </body>
 </html>
